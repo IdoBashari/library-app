@@ -32,7 +32,7 @@ android {
 }
 
 dependencies {
-    implementation(project(":rating-sdk"))
+    implementation("com.github.IdoBashari:library-app:v1.0.0")
     implementation("com.google.code.gson:gson:2.10.1")
 
     // AndroidX & Material
