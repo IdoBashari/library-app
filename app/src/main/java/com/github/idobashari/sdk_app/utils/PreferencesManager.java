@@ -40,10 +40,10 @@ public class PreferencesManager {
             Map<String, Object> userData = (Map<String, Object>) loginResponse.get("user");
 
             if (token != null && userData != null) {
-                // שמירת הטוקן בספרייה
+
                 RatingSDK.getInstance().setAuthToken(token);
 
-                // שמירה מקומית
+
                 preferences.edit()
                         .putString(KEY_AUTH_TOKEN, token)
                         .putString(KEY_USER_ID, (String) userData.get("id"))
@@ -102,7 +102,7 @@ public class PreferencesManager {
                     .remove(KEY_USER_ID)
                     .apply();
 
-            // ניקוי הטוקן גם בספרייה
+
             RatingSDK.getInstance().setAuthToken(null);
 
             Log.d(TAG, "User data cleared successfully");

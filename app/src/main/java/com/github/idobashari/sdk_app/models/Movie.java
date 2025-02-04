@@ -4,7 +4,7 @@ import android.os.Parcel;
 import android.os.Parcelable;
 
 public class Movie implements Parcelable {
-    private String id;           // ישמש כ-item_id בספרייה
+    private String id;
     private String title;
     private String description;
 

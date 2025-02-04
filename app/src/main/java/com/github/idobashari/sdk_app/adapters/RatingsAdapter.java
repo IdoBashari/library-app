@@ -23,10 +23,10 @@ public class RatingsAdapter extends RecyclerView.Adapter<RatingsAdapter.RatingVi
     private static final String TAG = "RatingsAdapter";
     private final List<Rating> ratings = new ArrayList<>();
     private final SimpleDateFormat dateFormat = new SimpleDateFormat("dd/MM/yyyy HH:mm", Locale.getDefault());
-    private String currentUserId; // להשוואה עם userId של כל דירוג
+    private String currentUserId;
     private RatingActionListener actionListener;
 
-    // ממשק לטיפול בפעולות על דירוגים
+
     public interface RatingActionListener {
         void onEditRating(Rating rating);
         void onDeleteRating(Rating rating);
@@ -35,7 +35,7 @@ public class RatingsAdapter extends RecyclerView.Adapter<RatingsAdapter.RatingVi
     // setters
     public void setCurrentUserId(String userId) {
         this.currentUserId = userId;
-        notifyDataSetChanged(); // לרענון התצוגה של כל הפריטים
+        notifyDataSetChanged();
     }
 
     public void setActionListener(RatingActionListener listener) {
@@ -104,7 +104,7 @@ public class RatingsAdapter extends RecyclerView.Adapter<RatingsAdapter.RatingVi
                 dateView.setText(dateFormat.format(rating.getCreatedAt()));
             }
 
-            // בדיקה האם הדירוג שייך למשתמש הנוכחי
+
             boolean isCurrentUserRating = currentUserId != null &&
                     currentUserId.equals(rating.getUserId());
             actionButtons.setVisibility(isCurrentUserRating ? View.VISIBLE : View.GONE);

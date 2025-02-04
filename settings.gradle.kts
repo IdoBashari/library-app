@@ -25,6 +25,6 @@ dependencyResolutionManagement {
     }
 }
 
-rootProject.name = "sdk-rating" // שיניתי את השם למשהו יותר תיאורי
+rootProject.name = "sdk-rating"
 include(":app")
 include(":rating-sdk")

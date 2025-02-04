@@ -36,21 +36,18 @@ public class LoginActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
 
-        // אתחול שדות
         initializeViews();
 
-        // אתחול SDK ו-PreferencesManager
         preferencesManager = PreferencesManager.getInstance(this);
         ratingSDK = RatingSDK.getInstance();
 
-        // בדיקה האם המשתמש כבר מחובר
         if (preferencesManager.isUserLoggedIn()) {
             Log.d(TAG, "User already logged in, redirecting to MainActivity");
             startMainActivity();
             return;
         }
 
-        // הגדרת מאזינים
+
         loginButton.setOnClickListener(v -> handleLogin());
         registerButton.setOnClickListener(v -> handleRegister());
     }

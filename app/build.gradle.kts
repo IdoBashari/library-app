@@ -32,7 +32,7 @@ android {
 }
 
 dependencies {
-    implementation(project(":rating-sdk"))  // הוספנו את התלות בספרייה שלנו
+    implementation(project(":rating-sdk"))
     implementation("com.google.code.gson:gson:2.10.1")
 
     // AndroidX & Material

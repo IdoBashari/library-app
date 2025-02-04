@@ -1,5 +1,6 @@
 plugins {
     id("com.android.library")
+    id("maven-publish")
 }
 
 android {
@@ -26,6 +27,13 @@ android {
         sourceCompatibility = JavaVersion.VERSION_1_8
         targetCompatibility = JavaVersion.VERSION_1_8
     }
+
+    publishing {
+        singleVariant("release") {
+            withSourcesJar()
+            withJavadocJar()
+        }
+    }
 }
 
 dependencies {
@@ -42,4 +50,18 @@ dependencies {
     testImplementation("junit:junit:4.13.2")
     androidTestImplementation("androidx.test.ext:junit:1.1.5")
     androidTestImplementation("androidx.test.espresso:espresso-core:3.5.1")
+}
+
+afterEvaluate {
+    publishing {
+        publications {
+            create<MavenPublication>("release") {
+                groupId = "com.github.idobashari"
+                artifactId = "rating-sdk"
+                version = "1.0.0"
+
+                from(components["release"])
+            }
+        }
+    }
 }

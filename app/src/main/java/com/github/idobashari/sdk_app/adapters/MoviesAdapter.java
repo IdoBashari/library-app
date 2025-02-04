@@ -62,7 +62,7 @@ public class MoviesAdapter extends RecyclerView.Adapter<MoviesAdapter.MovieViewH
             titleView.setText(movie.getTitle());
             descriptionView.setText(movie.getDescription());
 
-            // מעבר למסך פרטי הסרט בלחיצה על הפריט
+
             itemView.setOnClickListener(v -> {
                 Intent intent = new Intent(itemView.getContext(), MovieDetailsActivity.class);
                 intent.putExtra("movie", movie);

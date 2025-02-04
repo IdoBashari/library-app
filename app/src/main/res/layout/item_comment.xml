@@ -18,7 +18,7 @@
             android:layout_height="wrap_content"
             android:orientation="horizontal">
 
-            <!-- תוכן התגובה -->
+
             <TextView
                 android:id="@+id/commentContent"
                 android:layout_width="0dp"

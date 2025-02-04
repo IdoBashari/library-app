@@ -25,7 +25,7 @@ public class CommentsAdapter extends RecyclerView.Adapter<CommentsAdapter.Commen
     private String currentUserId;
     private CommentActionListener actionListener;
 
-    // ממשק לטיפול בפעולות על תגובות
+
     public interface CommentActionListener {
         void onEditComment(Comment comment);
         void onDeleteComment(Comment comment);
@@ -93,7 +93,7 @@ public class CommentsAdapter extends RecyclerView.Adapter<CommentsAdapter.Commen
                 dateView.setText(dateFormat.format(comment.getCreatedAt()));
             }
 
-            // בדיקה האם התגובה שייכת למשתמש הנוכחי
+
             boolean isCurrentUserComment = currentUserId != null &&
                     currentUserId.equals(comment.getUserId());
             actionButtons.setVisibility(isCurrentUserComment ? View.VISIBLE : View.GONE);
