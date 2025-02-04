@@ -3,7 +3,7 @@ plugins {
     id("maven-publish")
 }
 
-val libraryVersion = "1.0.3"  // הוספנו את זה
+
 
 android {
     namespace = "com.github.idobashari.rating_sdk"
@@ -12,7 +12,7 @@ android {
     defaultConfig {
         minSdk = 24
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
-        consumerProguardFiles("consumer-rules.pro")
+        //consumerProguardFiles("consumer-rules.pro")
     }
 
     buildTypes {
@@ -60,7 +60,7 @@ afterEvaluate {
             create<MavenPublication>("release") {
                 groupId = "com.github.IdoBashari"
                 artifactId = "library-app"
-                version = libraryVersion
+                version = project.version.toString()
 
                 from(components["release"])
             }
