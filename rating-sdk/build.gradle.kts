@@ -3,6 +3,8 @@ plugins {
     id("maven-publish")
 }
 
+val libraryVersion = "1.0.1"  // הוספנו את זה
+
 android {
     namespace = "com.github.idobashari.rating_sdk"
     compileSdk = 34
@@ -56,9 +58,9 @@ afterEvaluate {
     publishing {
         publications {
             create<MavenPublication>("release") {
-                groupId = "com.github.idobashari"
-                artifactId = "rating-sdk"
-                version = "1.0.0"
+                groupId = "com.github.IdoBashari" 
+                artifactId = "library-app"
+                version = libraryVersion
 
                 from(components["release"])
             }
