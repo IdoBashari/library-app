@@ -32,7 +32,7 @@ android {
 }
 
 dependencies {
-    implementation("com.github.IdoBashari:library-app:v1.0.0")
+    implementation("com.github.IdoBashari:library-app:v1.0.3")
     implementation("com.google.code.gson:gson:2.10.1")
 
     // AndroidX & Material
