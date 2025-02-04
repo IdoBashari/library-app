@@ -1,0 +1,46 @@
+<resources>
+    <!-- Existing strings -->
+    <string name="app_name">SDK Rating App</string>
+    <string name="app_title">Movies Rating App</string>
+    <string name="hint_email">Email</string>
+    <string name="hint_password">Password</string>
+    <string name="button_login">Login</string>
+    <string name="button_register">Register</string>
+    <string name="title_movie_details">Movie Details</string>
+    <string name="title_rate_movie">Rate this movie</string>
+    <string name="title_comments">Comments</string>
+    <string name="hint_rating_description">Add rating description (optional)</string>
+    <string name="hint_comment">Add a comment</string>
+    <string name="button_submit_rating">Submit Rating</string>
+    <string name="button_submit_comment">Submit Comment</string>
+
+    <!-- הוספת המחרוזות החסרות בדיוק כפי שהן מופיעות בקוד -->
+    <string name="rating_submitted">Rating submitted successfully</string>
+    <string name="comment_submitted">Comment submitted successfully</string>
+    <string name="edit_rating_title">Edit Rating</string>
+    <string name="edit_comment_title">Edit Comment</string>
+
+    <!-- Dialog strings -->
+    <string name="rating_dialog_title">Edit Rating</string>
+    <string name="comment_dialog_title">Edit Comment</string>
+    <string name="delete_rating_title">Delete Rating</string>
+    <string name="delete_rating_message">Are you sure you want to delete this rating?</string>
+    <string name="delete_comment_title">Delete Comment</string>
+    <string name="delete_comment_message">Are you sure you want to delete this comment?</string>
+    <string name="save">Save</string>
+    <string name="delete">Delete</string>
+    <string name="cancel">Cancel</string>
+
+    <!-- Success messages -->
+    <string name="rating_updated">Rating updated successfully</string>
+    <string name="rating_deleted">Rating deleted successfully</string>
+    <string name="comment_updated">Comment updated successfully</string>
+    <string name="comment_deleted">Comment deleted successfully</string>
+
+    <!-- Error messages -->
+    <string name="error_rating_required">Please select a rating</string>
+    <string name="error_comment_required">Please enter a comment</string>
+    <string name="error_not_logged_in">You must be logged in</string>
+    <string name="error_loading_ratings">Failed to load ratings</string>
+    <string name="error_loading_comments">Failed to load comments</string>
+</resources>
